@@ -1,0 +1,230 @@
+@charset "utf-8";
+/*
+Theme Name: bzstudio
+Theme URI: https://bzgzs.cn/
+Author: vvvbbbcz
+Author URI: https://vvvbbbcz.com/
+Description: A WordPress Theme By VVVBBBCZ For BZ-Studio
+Version: 1.0
+License: GNU General Public License Version 3
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
+Text Domain: bzstudio
+Tags: bzstudio
+*/
+
+/*网页整体*/
+body {
+    background-color: #000000;
+    margin: 0;
+}
+
+body > * {
+    color: #ffffff;
+}
+
+body #bg {
+    -moz-transform: scale(1.0825);
+    -webkit-transform: scale(1.0825);
+    -ms-transform: scale(1.0825);
+    transform: scale(1.0825);
+    -moz-filter: blur(0.5rem);
+    -webkit-filter: blur(0.5rem);
+    -ms-filter: blur(0.5rem);
+    filter: blur(0.5rem);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://z3.ax1x.com/2021/09/05/hWi3f1.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+/*主菜单*/
+#main-menu {
+    display: flex;
+    background-color: #00000077;
+    padding: 0.3rem 2rem;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    align-items: center;
+    justify-content: space-between;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    z-index: 50;
+}
+
+#main-menu .site-branding > * {
+    display: inline-block;
+    margin: 0;
+    line-height: 1.35;
+}
+
+#main-menu .site-description {
+    font-size: x-small;
+}
+
+#main-menu button {
+    -moz-transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out, border-left-color 0.5s ease-in-out, border-right-color 0.5s ease-in-out, border-top-color 0.5s ease-in-out, border-bottom-color 0.5s ease-in-out;
+    -webkit-transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out, border-left-color 0.5s ease-in-out, border-right-color 0.5s ease-in-out, border-top-color 0.5s ease-in-out, border-bottom-color 0.5s ease-in-out;
+    -ms-transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out, border-left-color 0.5s ease-in-out, border-right-color 0.5s ease-in-out, border-top-color 0.5s ease-in-out, border-bottom-color 0.5s ease-in-out;
+    transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out, border-left-color 0.5s ease-in-out, border-right-color 0.5s ease-in-out, border-top-color 0.5s ease-in-out, border-bottom-color 0.5s ease-in-out;
+    display: none;
+    color: #ffffff;
+    background-color: transparent;
+    border: solid 1px #ffffff;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#main-menu button:hover {
+    color: #ff9999;
+    background-color: #ff999933;
+    border: solid 1px #ff9999;
+}
+
+#main-menu nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+#main-menu nav li {
+    display: inline-block;
+}
+
+#main-menu nav a {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+#main-menu nav a:hover {
+    background-color: #ff999933;
+}
+
+#main-menu nav ul.sub-menu {
+    display: none;
+}
+
+#main-menu a {
+    -moz-transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    -webkit-transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    -ms-transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#main-menu a:hover {
+    color: #ff9999;
+}
+
+.admin-bar #main-menu {
+    top: 32px;
+}
+
+/*网页主体*/
+#page {
+    margin: 4rem 1.5rem 1.5rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: #00000055;
+}
+
+#page a {
+    -moz-transition: color 0.5s ease-in-out, border-bottom-color 0.2s ease-in-out, border-bottom-width 0.2s ease-in-out;
+    -webkit-transition: color 0.5s ease-in-out, border-bottom-color 0.2s ease-in-out, border-bottom-width 0.2s ease-in-out;
+    -ms-transition: color 0.5s ease-in-out, border-bottom-color 0.2s ease-in-out, border-bottom-width 0.2s ease-in-out;
+    transition: color 0.5s ease-in-out, border-bottom-color 0.2s ease-in-out, border-bottom-width 0.2s ease-in-out;
+    border-bottom: solid 1px #ff999977;
+    color: #ff9999;
+    text-decoration: none;
+}
+
+#page a:hover {
+    border-bottom: solid 3px rgba(255, 153, 153, 0.5);
+    border-bottom-color: transparent;
+    color: #47d3ea;
+}
+
+#page .post-title a {
+    border-bottom: none;
+}
+
+/*页脚*/
+#footer {
+    text-align: center;
+}
+
+@media screen and (max-width: 48.875em) {
+    body > #page {
+        margin: 1rem;
+        padding: 0.5rem;
+    }
+
+    #main-menu {
+        position: static;
+        width: auto;
+    }
+
+    #main-menu > * {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #main-menu .site-branding {
+        align-self: flex-start;
+    }
+
+    #main-menu .site-description {
+        display: none;
+    }
+
+    #main-menu button {
+        display: block;
+    }
+
+    #main-menu nav {
+        display: none;
+        margin: 1rem 0;
+    }
+
+    #main-menu nav li {
+        list-style: none;
+        border-top: 1px solid #ff999955;
+    }
+
+    #main-menu nav li:last-child {
+        border-bottom: 1px solid #ff999955;
+    }
+
+    #main-menu nav a {
+        display: block;
+        border-radius: 0;
+    }
+
+    #main-menu nav a:hover {
+        background-color: transparent;
+    }
+
+    #main-menu nav.button-on {
+        display: block;
+        -webkit-flex: 0 1 100%;
+        -ms-flex: 0 1 100%;
+        flex: 0 1 100%;
+    }
+
+    #main-menu nav.button-on li {
+        display: list-item;
+    }
+
+    .admin-bar #main-menu {
+        top: 46px;
+    }
+}
