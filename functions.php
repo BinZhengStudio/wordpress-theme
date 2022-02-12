@@ -15,8 +15,8 @@ function bzstudio_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Sidebar', 'bzstudio' ),
 		'id'            => 'sidebar',
-		'before_widget' => '<div id="%1$s" class="%2$s">',
-		'after_widget'  => '</div>',
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>'
 	) );

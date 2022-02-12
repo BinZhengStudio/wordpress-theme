@@ -101,11 +101,6 @@ body #bg {
 
 #main-menu nav a {
     padding: 0.5rem;
-    border-radius: 0.5rem;
-}
-
-#main-menu nav a:hover {
-    background-color: #ff999933;
 }
 
 #main-menu nav ul.sub-menu {
@@ -129,7 +124,7 @@ body #bg {
     top: 32px;
 }
 
-/*网页主体*/
+/*页面主体*/
 #page {
     margin: 4rem 1.5rem 1.5rem;
     border-radius: 1rem;
@@ -162,6 +157,37 @@ body #bg {
     text-align: center;
 }
 
+@media screen and (min-width: 48.875em) {
+    #main-menu nav a {
+        border-radius: 0.5rem;
+    }
+
+    #main-menu nav a:hover {
+        background-color: #ff999933;
+    }
+
+    /*内容容器*/
+    #content:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    /*主要部分*/
+    #main {
+        float: left;
+        width: 70%;
+        margin-right: -100%;
+    }
+
+    /*侧边栏*/
+    #sidebar {
+        float: left;
+        margin-left: 75%;
+        width: 25%;
+    }
+}
+
 @media screen and (max-width: 48.875em) {
     body > #page {
         margin: 1rem;
@@ -170,12 +196,6 @@ body #bg {
 
     #main-menu {
         position: static;
-        width: auto;
-    }
-
-    #main-menu > * {
-        margin-left: 0;
-        margin-right: 0;
     }
 
     #main-menu .site-branding {
@@ -205,12 +225,7 @@ body #bg {
     }
 
     #main-menu nav a {
-        display: block;
-        border-radius: 0;
-    }
-
-    #main-menu nav a:hover {
-        background-color: transparent;
+        display: block
     }
 
     #main-menu nav.button-on {
