@@ -20,6 +20,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
+    font-family: serif;
+    line-height: 1.5rem;
     margin: 0 0 1.75em;
 }
 
@@ -69,6 +71,7 @@ body #bg {
     width: 100%;
     height: 100%;
     background-image: url("https://z3.ax1x.com/2021/09/05/hWi3f1.png");
+    /*background-image: url("https://z3.ax1x.com/2021/08/27/hKE0HS.png");*/
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -77,19 +80,25 @@ body #bg {
 
 /*主菜单*/
 #main-menu {
-    display: flex;
     background-color: #00000077;
     padding: 0.3rem 2rem;
     position: fixed;
     left: 0;
     right: 0;
     top: 0;
+    z-index: 50;
+}
+
+#main-menu .main-menu-wrapper {
+    margin: 0 auto;
+    display: flex;
     align-items: center;
     justify-content: space-between;
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    z-index: 50;
+    max-width: 72rem;/* TODO 添加不同尺寸的支持 */
+    height: 100%;
 }
 
 #main-menu .site-branding > * {
@@ -138,8 +147,9 @@ body #bg {
 
 /*页面主体*/
 #page {
-    margin: 5rem 1.5rem 1.5rem;
+    margin: 5rem auto auto;
     border-radius: 1rem;
+    width: 70%;
     padding: 2rem;
     background-color: #00000055;
 }
@@ -177,11 +187,21 @@ body #bg {
 }
 
 #main article:hover {
-    background-color: #00000033;
+    background-color: #00000066;
 }
 
 #main .post-time {
     font-size: xx-small;
+}
+
+#main .post-excerpt p {
+    width: 50%;
+    height: 3rem;
+    overflow: hidden;
+}
+
+#single {
+    background-color: #00000066;
 }
 
 #sidebar section {
@@ -196,6 +216,12 @@ body #bg {
     margin: 0 1rem 0 1rem;
 }
 
+@media screen and (min-width: 100em) {
+    #page {
+        width: 70rem;
+    }
+}
+
 @media screen and (min-width: 48.875em) {
     #main-menu button {
         display: none;
@@ -207,10 +233,6 @@ body #bg {
 
     #main-menu nav a:hover {
         background-color: #ff999933;
-    }
-
-    #content {
-        width: auto;
     }
 
     /*内容容器*/
@@ -235,13 +257,14 @@ body #bg {
     }
 }
 
+@media screen and (max-width: 70em) {
+    #page {
+        margin: 5rem 1.5rem 1.5rem;
+        width: auto;
+    }
+}
 
 @media screen and (max-width: 48.875em) {
-    #page {
-        margin: 1.5rem;
-        padding: 2.5rem 0 1rem 0;
-    }
-
     #main-menu {
         position: static;
     }
@@ -283,9 +306,9 @@ body #bg {
         display: list-item;
     }
 
-    #content {
+    #page {
+        margin: 1.5rem auto;
         width: 80%;
-        margin: auto;
     }
 
     #sidebar {
@@ -304,11 +327,8 @@ body #bg {
     #page {
         border-radius: 0;
         margin: 0;
-        padding: 1rem;
-    }
-
-    #content {
         width: auto;
+        padding: 1rem;
     }
 
     #sidebar {

@@ -1,0 +1,211 @@
+body {
+    display: flex;
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    align-items: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #000000;
+}
+
+body:before {
+    content: "";
+    display: block;
+    -moz-transform: scale(1.0825);
+    -webkit-transform: scale(1.0825);
+    -ms-transform: scale(1.0825);
+    transform: scale(1.0825);
+    -moz-filter: blur(0.5rem);
+    -webkit-filter: blur(0.5rem);
+    -ms-filter: blur(0.5rem);
+    filter: blur(0.5rem);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://z3.ax1x.com/2021/09/05/hWi3f1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+}
+
+a:focus {
+    box-shadow: 0 0 5px 1px #ff9999;
+    border-radius: 3px;
+}
+
+/*登录页面*/
+#login {
+    font: 14px/1.4 "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
+    background: #ffffff77;
+    border-radius: 0.5rem;
+    min-width: 350px;
+    padding: 0;
+}
+
+#login h1 a {
+    text-indent: 0;
+    font-size: 0;
+    height: 32px;
+    width: 100%;
+    line-height: 180%;
+    text-align: center;
+    color: #FFF;
+    margin-bottom: 10px;
+    margin-top: 25px;
+    background-image: url(https://bzgzs.cn/logo);
+    background-position: center bottom !important;
+    background-size: contain;
+    padding-top: 20px;
+    box-shadow: none;
+}
+
+#login #login_error, #login .message {
+    margin-bottom: 0 !important;
+    background: #ffffff77;
+    border-left: 4px solid #ff9999;
+    border-right: 4px solid #ff9999;
+}
+
+#login form {
+    padding: 10px 0;
+    background: none;
+    box-shadow: none;
+    margin-top: 10px;
+    border: none;
+}
+
+#login form > * {
+    padding: 0 2rem !important;
+}
+
+#login a, #login_error a {
+    color: #000 !important;
+}
+
+#login form label {
+    color: #333;
+}
+
+#login form .input {
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    transition: 0.2s;
+    background: none;
+    padding: 5px 10px;
+    color: #333;
+    font-weight: normal;
+    font-size: 14px;
+    background: #fff;
+    font-family: "Noto Sans CJK SC", serif;
+    box-shadow: 0 0 0 1000px white inset;
+    height: 46px;
+    border-radius: 3px;
+    margin-top: 0;
+}
+
+#login form .input:focus {
+    border: 2px solid #ff9999;
+}
+
+#login .button.wp-hide-pw {
+    -webkit-transition: opacity 0.2s ease-in-out;
+    -ms-transition: opacity 0.2s ease-in-out;
+    -moz-transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
+    color: #ff6666;
+    width: 46px;
+    height: 46px;
+    padding-bottom: 28px;
+    padding-top: 10px !important;
+    padding-left: 40px !important;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    opacity: 0.7;
+}
+
+#login .button.wp-hide-pw:hover {
+    opacity: 1;
+}
+
+#login .button.wp-hide-pw:focus {
+    box-shadow: none;
+}
+
+#login .button.wp-hide-pw .dashicons {
+    right: 1.55rem;
+}
+
+#login input[type=checkbox] {
+    transition: 0.2s ease-in-out;
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -ms-transition: 0.2s ease-in-out;
+}
+
+#login input[type=checkbox]:hover {
+    border-color: #ff9999;
+    box-shadow: 0 0 0 1px #ff9999;
+}
+
+#login input[type=checkbox]:focus {
+    border-color: #ff9999;
+    box-shadow: 0 0 0 1px #ff9999;
+}
+
+#login .submit .button {
+    width: 100%;
+    margin: 0.8rem 0;
+    border: none;
+    border-radius: 3rem;
+    height: 3rem;
+    color: #FFF;
+    background: #ff5555;
+    cursor: pointer;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+#login #nav {
+    margin: 0;
+    text-align: center;
+}
+
+/*语言选择*/
+#language-switcher .dashicons {
+    color: #ff9999;
+}
+
+#language-switcher select:hover {
+    color: #2c3338;
+}
+
+#language-switcher select:focus {
+    color: #2c3338;
+    border-color: #ff7777;
+    box-shadow: 0 0 0 1px #ff7777;
+}
+
+#language-switcher .button {
+    vertical-align: top;
+    color: #333;
+    border-color: #ff7777;
+}
+
+#language-switcher .button:focus {
+    box-shadow: 0 0 0 1px #ff7777;
+}
+
+/*TODO 待编写验证码的部分*/
