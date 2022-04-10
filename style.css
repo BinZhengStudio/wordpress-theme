@@ -12,6 +12,10 @@ Text Domain: bzstudio
 Tags: bzstudio
 */
 
+a {
+    text-decoration: none;
+}
+
 h1, h2, h3, h4, h5, h6 {
     clear: both;
     font-weight: 700;
@@ -26,10 +30,10 @@ p {
 }
 
 button {
-    -moz-transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out, border-left-color 0.5s ease-in-out, border-right-color 0.5s ease-in-out, border-top-color 0.5s ease-in-out, border-bottom-color 0.5s ease-in-out;
-    -webkit-transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out, border-left-color 0.5s ease-in-out, border-right-color 0.5s ease-in-out, border-top-color 0.5s ease-in-out, border-bottom-color 0.5s ease-in-out;
-    -ms-transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out, border-left-color 0.5s ease-in-out, border-right-color 0.5s ease-in-out, border-top-color 0.5s ease-in-out, border-bottom-color 0.5s ease-in-out;
-    transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out, border-left-color 0.5s ease-in-out, border-right-color 0.5s ease-in-out, border-top-color 0.5s ease-in-out, border-bottom-color 0.5s ease-in-out;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    transition: 0.5s;
     color: #ffffff;
     background-color: transparent;
     border: solid 1px #ffffff;
@@ -134,7 +138,6 @@ body #bg {
     -ms-transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
     transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
     color: #ffffff;
-    text-decoration: none;
 }
 
 #main-menu a:hover {
@@ -147,7 +150,7 @@ body #bg {
 
 /*页面主体*/
 #page {
-    margin: 5rem auto auto;
+    margin: 5rem auto 1rem;
     border-radius: 1rem;
     width: 70%;
     padding: 2rem;
@@ -155,18 +158,14 @@ body #bg {
 }
 
 #page a {
-    -moz-transition: color 0.5s ease-in-out, border-bottom-color 0.2s ease-in-out, border-bottom-width 0.2s ease-in-out;
-    -webkit-transition: color 0.5s ease-in-out, border-bottom-color 0.2s ease-in-out, border-bottom-width 0.2s ease-in-out;
-    -ms-transition: color 0.5s ease-in-out, border-bottom-color 0.2s ease-in-out, border-bottom-width 0.2s ease-in-out;
-    transition: color 0.5s ease-in-out, border-bottom-color 0.2s ease-in-out, border-bottom-width 0.2s ease-in-out;
-    border-bottom: solid 1px #ff999977;
+    -moz-transition: color 0.5s ease-in-out;
+    -webkit-transition: color 0.5s ease-in-out;
+    -ms-transition: color 0.5s ease-in-out;
+    transition: color 0.5s ease-in-out;
     color: #ff9999;
-    text-decoration: none;
 }
 
 #page a:hover {
-    border-bottom: solid 3px rgba(255, 153, 153, 0.5);
-    border-bottom-color: transparent;
     color: #47d3ea;
 }
 
@@ -174,14 +173,9 @@ body #bg {
     border: none;
 }
 
-#page .post-title a {
-    border-bottom: none;
-}
-
 #main article {
     transition: background-color 0.2s ease-in-out;
     border-radius: 1rem;
-    padding: 0 0.6rem 0.6rem 0.6rem;
     margin-bottom: 1.5rem;
     box-shadow: 0 0 10px 1px #00000066;
 }
@@ -190,18 +184,59 @@ body #bg {
     background-color: #00000066;
 }
 
+#main article.post-list {
+    display: flex;
+    justify-content: space-between;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+#main article.post-list .post-title {
+    width: 100%;
+    margin: 0.25rem 0.6rem;
+}
+
+#main .post-content-wrapper {
+    margin: 0 0 0.6rem 0.6rem;
+    width: 47.5%;
+}
+
 #main .post-time {
     font-size: xx-small;
 }
 
-#main .post-excerpt p {
-    width: 50%;
-    height: 3rem;
+#main .post-thumb-wrapper {
+    width: 47.5%;
+}
+
+#main .post-thumb-wrapper a {
+    display: block;
     overflow: hidden;
+    height: 100%;
+    border-radius: 1rem 0 1rem 0;
+}
+
+#main .post-thumb-wrapper img {
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    transition: 0.5s;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#main .post-thumb-wrapper img:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 #single {
     background-color: #00000066;
+    padding: 1.5rem !important;
 }
 
 #sidebar section {

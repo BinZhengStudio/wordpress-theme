@@ -1,7 +1,6 @@
 <article id="single" <?php post_class(); ?>>
 	<?php
     the_title('<h1 class="post-title">', '</h1>');
-    bzstudio_post_picture();
     ?>
 	<div class="post-content">
         <?php

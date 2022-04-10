@@ -8,6 +8,9 @@ function bzstudio_setup() {
 		)
 	);
 
+	add_theme_support('post-thumbnails');
+	set_post_thumbnail_size(960, 540, true);
+
 //	remove_action('wp_head', 'feed_links_extra', 3);
 	remove_action('wp_head', 'rsd_link');
 	remove_action('wp_head', 'wlwmanifest_link');

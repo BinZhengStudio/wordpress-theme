@@ -10,7 +10,7 @@ function bzstudio_post_date(): string {
 	);
 }
 
-function bzstudio_post_picture() {
+function bzstudio_post_thumbnail() {
 	if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
 		return;
 	}
@@ -18,13 +18,13 @@ function bzstudio_post_picture() {
 	if ( is_singular() ) :
 		?>
 
-		<div class="post-picture">
+		<div class="post-thumb">
 			<?php the_post_thumbnail(); ?>
 		</div>
 
 	<?php else : ?>
 
-		<a class="post-picture" href="<?php the_permalink(); ?>" aria-hidden="true">
+		<a class="post-thumb" href="<?php the_permalink(); ?>" aria-hidden="true">
 			<?php the_post_thumbnail( 'post-thumbnail', array( 'alt' => the_title_attribute( 'echo=0' ) ) ); ?>
 		</a>
 
