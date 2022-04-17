@@ -134,13 +134,15 @@ body #bg {
 
 #main-menu nav li {
     display: inline-block;
+    list-style: none;
 }
 
 #main-menu nav a {
-    padding: 0.5rem;
+    display: block;
+    padding: 0.3rem 0.5rem;
 }
 
-#main-menu nav ul.sub-menu {
+#main-menu nav ul ul {
     display: none;
 }
 
@@ -274,6 +276,31 @@ body #bg {
         background-color: #ff999933;
     }
 
+    #main-menu nav ul ul {
+        position: absolute;
+        /*right: 0;*/
+        /*left: auto;*/
+        margin: 0;
+        border-radius: 0.5rem;
+        background-color: #00000077;
+        z-index: 99999;
+    }
+
+    #main-menu nav ul li:hover > ul {
+        display: block;
+    }
+
+    #main-menu nav ul ul li {
+        display: list-item;
+    }
+
+    #main-menu nav ul ul a {
+        display: block;
+        border-radius: 0;
+        background: none !important;
+        padding: 0.3rem;
+    }
+
     /*内容容器*/
     #content:after {
         content: "";
@@ -322,16 +349,11 @@ body #bg {
     }
 
     #main-menu nav li {
-        list-style: none;
         border-top: 1px solid #ff999955;
     }
 
     #main-menu nav li:last-child {
         border-bottom: 1px solid #ff999955;
-    }
-
-    #main-menu nav a {
-        display: block
     }
 
     #main-menu nav.button-on {
