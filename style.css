@@ -21,11 +21,11 @@ a {
 }
 
 .post-content a {
-    border-bottom: solid 1px rgba(255, 153, 153, 0.5);
+    border-bottom: solid 1px rgba(255, 153, 153, 0.47);
 }
 
 .post-content a:hover {
-    border-bottom: solid 3px rgba(255, 153, 153, 0.5);
+    border-bottom: solid 3px rgba(255, 153, 153, 0.47);
     border-bottom-color: transparent;
 }
 
@@ -62,12 +62,11 @@ button, button.wp-block-search__button {
 
 button:hover {
     color: #ff9999;
-    background-color: #ff999933;
+    background-color: rgba(255, 153, 153, 0.2);
     border: solid 1px #ff9999;
 }
 
 blockquote {
-    font-size: 18px;
     font-size: 1.125rem;
     font-style: italic;
     line-height: 1.7;
@@ -105,8 +104,7 @@ body #bg {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("https://z3.ax1x.com/2021/09/05/hWi3f1.png");
-    /*background-image: url("https://z3.ax1x.com/2021/08/27/hKE0HS.png");*/
+    background-image: url("https://z3.ax1x.com/2021/09/05/hWi3f1.md.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -115,7 +113,7 @@ body #bg {
 
 /*主菜单*/
 #main-menu {
-    background-color: #00000077;
+    background-color: rgba(0, 0, 0, 0.47);
     padding: 0.3rem 2rem;
     position: fixed;
     left: 0;
@@ -187,7 +185,7 @@ body #bg {
     border-radius: 1rem;
     width: 70%;
     padding: 2rem;
-    background-color: #00000055;
+    background-color: rgba(0, 0, 0, 0.33);
 }
 
 #page a {
@@ -206,11 +204,11 @@ body #bg {
     transition: background-color 0.2s ease-in-out;
     border-radius: 1rem;
     margin-bottom: 1.5rem;
-    box-shadow: 0 0 10px 1px #00000066;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.4);
 }
 
 #main article:hover {
-    background-color: #00000066;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 #main article.post-list {
@@ -268,12 +266,12 @@ body #bg {
 }
 
 #single {
-    background-color: #00000066;
+    background-color: rgba(0, 0, 0, 0.4);
     padding: 1.5rem !important;
 }
 
 #sidebar section {
-    border-top: 3px solid #ff999977;
+    border-top: 3px solid rgba(255, 153, 153, 0.47);
     margin-bottom: 3.5em;
     padding-top: 1.75em;
 }
@@ -300,7 +298,7 @@ body #bg {
     }
 
     #main-menu nav a:hover {
-        background-color: #ff999933;
+        background-color: rgba(255, 153, 153, 0.2);
     }
 
     #main-menu nav ul ul {
@@ -309,7 +307,7 @@ body #bg {
         /*left: auto;*/
         margin: 0;
         border-radius: 0.5rem;
-        background-color: #00000077;
+        background-color: rgba(0, 0, 0, 0.47);
         z-index: 99999;
     }
 
@@ -376,11 +374,11 @@ body #bg {
     }
 
     #main-menu nav li {
-        border-top: 1px solid #ff999955;
+        border-top: 1px solid rgba(255, 153, 153, 0.34);
     }
 
     #main-menu nav li:last-child {
-        border-bottom: 1px solid #ff999955;
+        border-bottom: 1px solid rgba(255, 153, 153, 0.34);
     }
 
     #main-menu nav.button-on {
@@ -442,7 +440,7 @@ body #bg {
     }
 
     #main article {
-        background-color: #00000066;
+        background-color: rgba(0, 0, 0, 0.4);
     }
 
     #main .outer-post-thumb img:hover {
