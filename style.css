@@ -8,8 +8,8 @@ Description: A WordPress Theme By VVVBBBCZ For BZ-Studio
 Version: 1.0
 License: GNU General Public License Version 3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
-Text Domain: bzstudio
-Tags: bzstudio
+Text Domain: binzhengstudio
+Tags: binzhengstudio
 */
 
 a {
@@ -90,15 +90,12 @@ body > * {
     color: #ffffff;
 }
 
-body #bg {
-    -moz-transform: scale(1.0825);
-    -webkit-transform: scale(1.0825);
-    -ms-transform: scale(1.0825);
-    transform: scale(1.0825);
-    -moz-filter: blur(0.5rem);
-    -webkit-filter: blur(0.5rem);
-    -ms-filter: blur(0.5rem);
-    filter: blur(0.5rem);
+html #bg {
+    transition: 0.5s;
+    -moz-transform: scale(1.125);
+    -webkit-transform: scale(1.125);
+    -ms-transform: scale(1.125);
+    transform: scale(1.125);
     position: fixed;
     top: 0;
     left: 0;
@@ -111,8 +108,46 @@ body #bg {
     z-index: -1;
 }
 
+html:hover #bg {
+    -moz-transform: scale(1.0825);
+    -webkit-transform: scale(1.0825);
+    -ms-transform: scale(1.0825);
+    transform: scale(1.0825);
+    -moz-filter: blur(0.5rem);
+    -webkit-filter: blur(0.5rem);
+    -ms-filter: blur(0.5rem);
+    filter: blur(0.5rem);
+}
+
 #wpadminbar {
     background-color: rgba(0, 0, 0, 0.60) !important;
+}
+
+#wpadminbar a.ab-item, #wpadminbar > #wp-toolbar span.ab-label, #wpadminbar>#wp-toolbar span.ab-label {
+    transition: 0.2s;
+    color: #ffffff !important;
+}
+
+#wpadminbar .ab-top-menu > li.hover > .ab-item,
+#wpadminbar.nojq .quicklinks .ab-top-menu > li > .ab-item:focus,
+#wpadminbar:not(.mobile) .ab-top-menu > li:hover > .ab-item,
+#wpadminbar:not(.mobile) .ab-top-menu > li > .ab-item:focus,
+#wpadminbar>#wp-toolbar li.hover span.ab-label {
+    background-color: rgba(0, 0, 0, 0.20) !important;
+    color: #ff9999 !important;
+}
+
+#wpadminbar .menupop .ab-sub-wrapper {
+    background-color: rgba(0, 0, 0, 0.80) !important;
+}
+
+#wpadminbar .quicklinks .menupop ul li a, #wpadminbar .quicklinks .menupop.hover ul li a {
+    transition: 0.2s;
+    color: #ffffff !important;
+}
+
+#wpadminbar .quicklinks .menupop ul li a:hover, #wpadminbar .quicklinks .menupop.hover ul li a:hover {
+    color: #ff9999 !important;
 }
 
 /*主菜单*/
@@ -134,7 +169,7 @@ body #bg {
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    max-width: 72rem;/* TODO 添加不同尺寸的支持 */
+    max-width: 72rem; /* TODO 添加不同尺寸的支持 */
     height: 100%;
 }
 
@@ -145,7 +180,7 @@ body #bg {
 }
 
 #main-menu .site-description {
-    font-size: x-small;
+    font-size: small;
 }
 
 #main-menu a {
@@ -179,6 +214,30 @@ body #bg {
     display: none;
 }
 
+#main-menu nav ul ul li:last-child {
+    border-bottom: none;
+}
+
+#main-menu .dropdown-button {
+    border: none;
+    text-transform: none;
+    width: 3rem;
+}
+
+#main-menu .dropdown-button:after {
+    content: "\f431";
+    font-size: 1.1rem;
+    font-family: "Genericons", serif;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    color: #ff9999;
+}
+
+#main-menu .dropdown-button.button-on:after {
+    content: "\f432";
+}
+
 .admin-bar #main-menu {
     top: 32px;
 }
@@ -187,7 +246,7 @@ body #bg {
 #page {
     margin: 5rem auto 1rem;
     border-radius: 1rem;
-    width: 70%;
+    width: 70em;
     padding: 2rem;
     background-color: rgba(0, 0, 0, 0.33);
 }
@@ -238,7 +297,7 @@ body #bg {
 }
 
 #main .post-time {
-    font-size: xx-small;
+    font-size: small;
 }
 
 #main .inner-post-thumb {
@@ -354,7 +413,7 @@ body #bg {
         background-color: rgba(255, 153, 153, 0.2);
     }
 
-    #main-menu nav ul ul {
+    #main-menu nav ul ul { /* TODO 子菜单尚不完善 */
         position: absolute;
         /*right: 0;*/
         /*left: auto;*/
@@ -366,6 +425,8 @@ body #bg {
 
     #main-menu nav ul li:hover > ul {
         display: block;
+        /*right: 0;*/
+        /*left: auto;*/
     }
 
     #main-menu nav ul ul li {
@@ -401,7 +462,7 @@ body #bg {
     }
 }
 
-@media screen and (max-width: 70em) {
+@media screen and (max-width: 77em) {
     #page {
         margin: 5rem 1.5rem 1.5rem;
         width: auto;
@@ -426,6 +487,14 @@ body #bg {
         margin: 1rem 0;
     }
 
+    #main-menu nav a {
+        width: 100%;
+    }
+
+    #main-menu nav li.menu-item-has-children > a {
+        width: calc(100% - 4rem);
+    }
+
     #main-menu nav li {
         border-top: 1px solid rgba(255, 153, 153, 0.34);
     }
@@ -442,12 +511,28 @@ body #bg {
     }
 
     #main-menu nav.button-on li {
-        display: list-item;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    #main-menu nav ul ul.button-on {
+        display: block;
+        margin-left: 0.85rem;
+        -webkit-flex: 0 1 100%;
+        -ms-flex: 0 1 100%;
+        flex: 0 1 100%;
     }
 
     #page {
-        margin: 1.5rem auto;
-        width: 80%;
+        margin: 1.5rem;
+    }
+
+    #main article {
+        background-color: rgba(0, 0, 0, 0.4);
     }
 
     #sidebar {
@@ -455,6 +540,17 @@ body #bg {
         margin-right: auto;
         margin-left: auto;
         margin-top: 3rem;
+    }
+
+    #bg {
+        -moz-transform: scale(1.0825);
+        -webkit-transform: scale(1.0825);
+        -ms-transform: scale(1.0825);
+        transform: scale(1.0825);
+        -moz-filter: blur(0.5rem);
+        -webkit-filter: blur(0.5rem);
+        -ms-filter: blur(0.5rem);
+        filter: blur(0.5rem);
     }
 
     .admin-bar #main-menu {
@@ -509,5 +605,16 @@ body #bg {
 
     #sidebar {
         width: auto;
+    }
+
+    #bg {
+        -moz-transform: scale(1.0825);
+        -webkit-transform: scale(1.0825);
+        -ms-transform: scale(1.0825);
+        transform: scale(1.0825);
+        -moz-filter: blur(0.5rem);
+        -webkit-filter: blur(0.5rem);
+        -ms-filter: blur(0.5rem);
+        filter: blur(0.5rem);
     }
 }

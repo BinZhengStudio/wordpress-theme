@@ -1,6 +1,6 @@
 <?php
 
-function bzstudio_post_date(): string {
+function binzhengstudio_post_date(): string {
 	$time_string = '<time class="post-date" datetime="%1$s">%2$s</time>';
 
 	return sprintf(
@@ -10,7 +10,7 @@ function bzstudio_post_date(): string {
 	);
 }
 
-function bzstudio_post_thumbnail() {
+function binzhengstudio_post_thumbnail() {
 	if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
 		return;
 	}

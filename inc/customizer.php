@@ -1,5 +1,5 @@
 <?php
 
-function bzstudio_customize_register( $wp_customize ) {
+function binzhengstudio_customize_register( $wp_customize ) {
 }
-add_action( 'customize_register', 'bzstudio_customize_register' );
+add_action( 'customize_register', 'binzhengstudio_customize_register' );

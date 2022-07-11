@@ -10,7 +10,7 @@ if ( post_password_required() ) {
         <h2 class="comments-title">
 			<?php
 			$comments_number = get_comments_number();
-			printf( _x( '有 %1$s 条评论', 'comments title', 'bzstudio' ), number_format_i18n( $comments_number ) );
+			printf( _x( '有 %1$s 条评论', 'comments title', 'binzhengstudio' ), number_format_i18n( $comments_number ) );
 			?>
         </h2>
 
@@ -35,7 +35,7 @@ if ( post_password_required() ) {
 	<?php
 	if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 		?>
-        <p class="no-comments"><?php _e( '评论已关闭', 'bzstudio' ); ?></p>
+        <p class="no-comments"><?php _e( '评论已关闭', 'binzhengstudio' ); ?></p>
 	<?php endif; ?>
 
 	<?php
