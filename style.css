@@ -173,6 +173,10 @@ html:hover #bg {
     height: 100%;
 }
 
+#main-menu .site-branding {
+    margin-right: auto;
+}
+
 #main-menu .site-branding > * {
     display: inline-block;
     margin: 0;

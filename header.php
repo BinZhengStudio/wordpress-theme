@@ -15,16 +15,17 @@
             <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"
                                       rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 
-		    <?php $description = get_bloginfo( 'description', 'display' );
-		    if ( $description || is_customize_preview() ) :
-			    ?>
+			<?php $description = get_bloginfo( 'description', 'display' );
+			if ( $description || is_customize_preview() ) :
+				?>
                 <p class="site-description"><?php echo $description; ?></p>
-		    <?php endif; ?>
+			<?php endif; ?>
         </div>
 
-	    <?php if ( has_nav_menu( 'top' ) ) : ?>
-		    <?php get_template_part( 'template-parts/header/menu', 'top' ); ?>
-	    <?php endif; ?>
+		<?php if ( has_nav_menu( 'top' ) ) : ?>
+			<?php get_template_part( 'template-parts/header/menu', 'top' ); ?>
+		<?php endif; ?>
+		<?php get_template_part( 'template-parts/header/menu', 'accessibility' ); ?>
     </div>
 </header>
 <div id="page" class="site">

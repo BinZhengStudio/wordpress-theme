@@ -1,0 +1,65 @@
+button.accessibility-button {
+    display: block !important;
+    color: #ffffff;
+    background-color: #000000;
+    border: solid 1px #ffffff;
+    padding: 0;
+    margin: 0 0.5rem;
+    font-size: 1.25rem;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+button.accessibility-button:hover {
+    color: #ffffff;
+    background-color: #000000;
+    border: solid 1px #ffffff;
+}
+
+#accessibility-menu {
+    display: none;
+}
+
+#accessibility-menu.button-on {
+    display: block;
+}
+
+#accessibility-menu {
+    margin: 0;
+    padding: 0;
+}
+
+#accessibility-menu li {
+    display: inline-block;
+    list-style: none;
+}
+
+@media screen and (max-width: 48.875em) {
+    #accessibility-menu {
+        margin: 1rem 0;
+    }
+
+    #accessibility-menu li {
+        border-top: 1px solid #ffffff;
+    }
+
+    #accessibility-menu li:last-child {
+        border-bottom: 1px solid #ffffff;
+    }
+
+    #accessibility-menu.button-on {
+        display: block;
+        -webkit-flex: 0 1 100%;
+        -ms-flex: 0 1 100%;
+        flex: 0 1 100%;
+    }
+
+    #accessibility-menu.button-on li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+}
