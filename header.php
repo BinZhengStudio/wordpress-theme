@@ -25,7 +25,6 @@
 		<?php if ( has_nav_menu( 'top' ) ) : ?>
 			<?php get_template_part( 'template-parts/header/menu', 'top' ); ?>
 		<?php endif; ?>
-		<?php get_template_part( 'template-parts/header/menu', 'accessibility' ); ?>
     </div>
 </header>
 <div id="page" class="site">
