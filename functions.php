@@ -11,6 +11,15 @@ function binzhengstudio_setup() {
 	add_theme_support('post-thumbnails');
 	set_post_thumbnail_size(960, 540, true);
 
+	add_theme_support(
+		'custom-logo',
+		array(
+			'width'      => 128,
+			'height'     => 128,
+			'flex-width' => true,
+		)
+	);
+
 //	remove_action('wp_head', 'feed_links_extra', 3);
 	remove_action('wp_head', 'rsd_link');
 	remove_action('wp_head', 'wlwmanifest_link');

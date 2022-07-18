@@ -173,7 +173,20 @@ html:hover #bg {
     height: 100%;
 }
 
+#main-menu a.custom-logo-link {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 0.5rem;
+}
+
+#main-menu img.custom-logo {
+    width: 100%;
+    height: 100%;
+}
+
 #main-menu .site-branding {
+    display: flex;
+    align-items: center;
     margin-right: auto;
 }
 
@@ -184,6 +197,7 @@ html:hover #bg {
 }
 
 #main-menu .site-description {
+    margin-left: 0.5rem;
     font-size: small;
 }
 
@@ -620,5 +634,11 @@ html:hover #bg {
         -webkit-filter: blur(0.5rem);
         -ms-filter: blur(0.5rem);
         filter: blur(0.5rem);
+    }
+}
+
+@media screen and (max-width: 21em) {
+    #main-menu a.custom-logo-link {
+        display: none;
     }
 }
