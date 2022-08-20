@@ -20,6 +20,8 @@ function binzhengstudio_setup() {
 		)
 	);
 
+	add_theme_support('custom-background'); // TODO
+
 //	remove_action('wp_head', 'feed_links_extra', 3);
 	remove_action('wp_head', 'rsd_link');
 	remove_action('wp_head', 'wlwmanifest_link');
@@ -61,6 +63,8 @@ function binzhengstudio_styles_and_scripts() {
 add_action( 'wp_enqueue_scripts', 'binzhengstudio_styles_and_scripts' );
 
 require get_template_directory() . '/inc/template-tags.php';
+
+require get_template_directory() . '/inc/customizer.php';
 
 // 登录页面
 function binzhengstudio_login_page() {

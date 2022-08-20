@@ -101,7 +101,6 @@ html #bg {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("https://z3.ax1x.com/2021/09/05/hWi3f1.md.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -419,7 +418,7 @@ html:hover #bg {
 }
 
 @media screen and (min-width: 48.875em) {
-    #main-menu button {
+    #main-menu button.top-menu-button, #main-menu button.dropdown-button {
         display: none;
     }
 

@@ -6,7 +6,7 @@
 </footer>
 </div>
 
-<div id="bg"></div>
+<div id="bg" style="background-image: url('<?php echo get_theme_mod('binzhengstudio_background_image') ?>');"></div>
 
 <?php wp_footer(); ?>
 
