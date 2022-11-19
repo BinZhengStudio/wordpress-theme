@@ -41,6 +41,7 @@ p {
     font-family: serif;
     line-height: 1.5rem;
     margin: 0 0 1.75em;
+    word-break: break-word;
 }
 
 .wp-block-search.wp-block-search__button-inside .wp-block-search__inside-wrapper {
