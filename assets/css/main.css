@@ -491,6 +491,9 @@ html:hover #bg {
     #main-menu nav {
         display: none;
         margin: 1rem 0;
+        -webkit-flex: 0 1 100%;
+        -ms-flex: 0 1 100%;
+        flex: 0 1 100%;
     }
 
     #main-menu nav a {
@@ -503,20 +506,6 @@ html:hover #bg {
 
     #main-menu nav li {
         border-top: 1px solid rgba(255, 153, 153, 0.34);
-    }
-
-    #main-menu nav li:last-child {
-        border-bottom: 1px solid rgba(255, 153, 153, 0.34);
-    }
-
-    #main-menu nav.button-on {
-        display: block;
-        -webkit-flex: 0 1 100%;
-        -ms-flex: 0 1 100%;
-        flex: 0 1 100%;
-    }
-
-    #main-menu nav.button-on li {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -525,8 +514,11 @@ html:hover #bg {
         flex-wrap: wrap;
     }
 
-    #main-menu nav ul ul.button-on {
-        display: block;
+    #main-menu nav li:last-child {
+        border-bottom: 1px solid rgba(255, 153, 153, 0.34);
+    }
+
+    #main-menu nav ul ul {
         margin-left: 0.85rem;
         -webkit-flex: 0 1 100%;
         -ms-flex: 0 1 100%;

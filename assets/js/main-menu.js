@@ -16,9 +16,9 @@
 
     // 在点击时触发事件
     menuButton.on('click.binzhengstudio', function () {
-      menuItemsContainer.toggleClass('button-on')
+      menuItemsContainer.fadeToggle();
 
-      $(this).attr('aria-expanded', menuItemsContainer.hasClass('button-on'))
+      $(this).attr('aria-expanded', menuButton.attr('aria-expanded') === 'false' ? 'true' : 'false')
     })
   })();
 
@@ -43,13 +43,14 @@
     container.find('.menu-item-has-children').attr('aria-haspopup', 'true')
 
     container.find('.dropdown-button').on('click.binzhengstudio', function (e) {
-      const _this = $(this);
+      const button = $(this);
+      const menu = button.next('.children, .sub-menu');
       // const screenReaderSpan = _this.find('.screen-reader-text');
 
       e.preventDefault();
-      _this.toggleClass('button-on');
-      _this.next('.children, .sub-menu').toggleClass('button-on');
-      _this.attr('aria-expanded', _this.attr('aria-expanded') === 'false' ? 'true' : 'false');
+      button.toggleClass('button-on');
+      menu.fadeToggle();
+      button.attr('aria-expanded', button.attr('aria-expanded') === 'false' ? 'true' : 'false');
       // screenReaderSpan.text(screenReaderSpan.text() === screenReaderText.expand ? screenReaderText.collapse : screenReaderText.expand);
     })
   })()
