@@ -46,16 +46,17 @@ add_action( 'widgets_init', 'binzhengstudio_widgets_init' );
 
 function binzhengstudio_styles_and_scripts() {
 	// 进度条css
+	wp_enqueue_style( 'main', get_theme_file_uri( '/assets/css/main.min.css' ), array(), '20220711' );
 	wp_enqueue_style( 'pace', get_theme_file_uri( '/assets/css/pace-theme-minimal.min.css' ), array(), '1.2.4' );
-	wp_enqueue_style( 'accessibility', get_theme_file_uri( '/assets/css/accessibility.css' ), array(), '20220711' );
+//	wp_enqueue_style( 'accessibility', get_theme_file_uri( '/assets/css/accessibility.min.css' ), array(), '20220711' );
 	// genericons css
 	wp_enqueue_style( 'genericons', get_theme_file_uri( '/assets/genericons/genericons.css' ), array(), '20220711' );
 
 	// 进度条js
 	wp_enqueue_script( 'pace', get_theme_file_uri( '/assets/js/pace.min.js' ), array(), '1.2.4' );
 	// 顶部菜单
-	wp_enqueue_script( 'main-menu', get_theme_file_uri( '/assets/js/main-menu.js' ), array( 'jquery' ), '20220711', true );
-	wp_enqueue_script( 'accessibility-menu', get_theme_file_uri( '/assets/js/accessibility.js' ), array( 'jquery' ), '20220711', true );
+	wp_enqueue_script( 'main-menu', get_theme_file_uri( '/assets/js/main-menu.min.js' ), array( 'jquery' ), '20220711', true );
+//	wp_enqueue_script( 'accessibility-menu', get_theme_file_uri( '/assets/js/accessibility.min.js' ), array( 'jquery' ), '20220711', true );
 }
 
 add_action( 'wp_enqueue_scripts', 'binzhengstudio_styles_and_scripts' );
