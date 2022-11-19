@@ -66,7 +66,7 @@ require get_template_directory() . '/inc/template-tags.php';
 // 登录页面
 function binzhengstudio_login_page() {
 	//echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('template_directory') . '/inc/login.css" />'."\n";
-	echo '<link rel="stylesheet" type="text/css" href="' . get_template_directory_uri() . '/assets/css/login-page.css" />' . "\n";
+	echo '<link rel="stylesheet" type="text/css" href="' . get_template_directory_uri() . '/assets/css/login-page.min.css" />' . "\n";
 	//echo '<script type="text/javascript" src="'.get_bloginfo('template_directory').'/js/jquery.min.js"></script>'."\n";
 //	echo '<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/jquery/jquery@1.9.0/jquery.min.js"></script>' . "\n";
 }
