@@ -19,20 +19,32 @@ a {
 h1, h2, h3, h4, h5, h6 {
     clear: both;
     font-weight: 700;
-    margin: 0;
+    margin-block-start: 0;
+    margin-block-end: 0.5em;
     text-rendering: optimizeLegibility;
 }
 
 p {
     font-family: serif;
     line-height: 1.5rem;
-    margin: 0 0 1.75em;
+    margin-block-start: 0.5em;
+    margin-block-end: 1.5em;
     word-break: break-word;
+}
+
+ul {
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
 }
 
 .wp-block-search.wp-block-search__button-inside .wp-block-search__inside-wrapper {
     padding: 0 !important;
     border: none !important;
+}
+
+.is-layout-flex {
+    margin-block-start: 0.5em;
+    margin-block-end: 1.5em;
 }
 
 button, button.wp-block-search__button, input[type="submit"] {
@@ -390,8 +402,8 @@ html:hover #bg {
 
 #sidebar section {
     border-top: 3px solid rgba(255, 153, 153, 0.47);
-    margin-bottom: 3.5em;
-    padding-top: 1.75em;
+    margin-bottom: 1.5em;
+    padding-top: 1em;
 }
 
 /*页脚*/
