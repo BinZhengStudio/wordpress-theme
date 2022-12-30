@@ -1,18 +1,18 @@
 a {
     text-decoration: none;
-    transition: color 0.5s ease-in-out, border-bottom-width 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
-    -moz-transition: color 0.5s ease-in-out, border-bottom-width 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
-    -webkit-transition: color 0.5s ease-in-out, border-bottom-width 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
-    -ms-transition: color 0.5s ease-in-out, border-bottom-width 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    transition: 0.5s;
     word-break: break-word;
 }
 
 .post-content a {
-    border-bottom: solid 1px rgba(255, 153, 153, 0.47);
+    border-bottom: solid 1px rgba(255, 153, 153, 0.5);
 }
 
 .post-content a:hover {
-    border-bottom: solid 3px rgba(255, 153, 153, 0.47);
+    border-bottom: solid 3px rgba(255, 153, 153, 0.5);
     border-bottom-color: transparent;
 }
 
@@ -37,6 +37,11 @@ ul {
     margin-block-end: 0.5em;
 }
 
+img {
+    width: 100%;
+    height: 100%;
+}
+
 .wp-block-search.wp-block-search__button-inside .wp-block-search__inside-wrapper {
     padding: 0 !important;
     border: none !important;
@@ -45,6 +50,38 @@ ul {
 .is-layout-flex {
     margin-block-start: 0.5em;
     margin-block-end: 1.5em;
+}
+
+.at-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.d-flex {
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.bgblur-0_8em {
+    -webkit-backdrop-filter: blur(0.8em);
+    backdrop-filter: blur(0.8em);
+}
+
+.trans-0_5 {
+    -webkit-transition: 0.5s !important;
+    -moz-transition: 0.5s !important;
+    -ms-transition: 0.5s !important;
+    transition: 0.5s !important;
 }
 
 button, button.wp-block-search__button, input[type="submit"] {
@@ -90,12 +127,7 @@ body > * {
     color: #ffffff;
 }
 
-html #bg {
-    transition: 0.5s;
-    -moz-transform: scale(1.125);
-    -webkit-transform: scale(1.125);
-    -ms-transform: scale(1.125);
-    transform: scale(1.125);
+#bg {
     position: fixed;
     top: 0;
     left: 0;
@@ -108,51 +140,9 @@ html #bg {
     z-index: -1;
 }
 
-html:hover #bg {
-    -moz-transform: scale(1.0825);
-    -webkit-transform: scale(1.0825);
-    -ms-transform: scale(1.0825);
-    transform: scale(1.0825);
-    -moz-filter: blur(0.5rem);
-    -webkit-filter: blur(0.5rem);
-    -ms-filter: blur(0.5rem);
-    filter: blur(0.5rem);
-}
-
-#wpadminbar {
-    background-color: rgba(0, 0, 0, 0.60) !important;
-}
-
-#wpadminbar a.ab-item, #wpadminbar > #wp-toolbar span.ab-label, #wpadminbar>#wp-toolbar span.ab-label {
-    transition: 0.2s;
-    color: #ffffff !important;
-}
-
-#wpadminbar .ab-top-menu > li.hover > .ab-item,
-#wpadminbar.nojq .quicklinks .ab-top-menu > li > .ab-item:focus,
-#wpadminbar:not(.mobile) .ab-top-menu > li:hover > .ab-item,
-#wpadminbar:not(.mobile) .ab-top-menu > li > .ab-item:focus,
-#wpadminbar>#wp-toolbar li.hover span.ab-label {
-    background-color: rgba(0, 0, 0, 0.20) !important;
-    color: #ff9999 !important;
-}
-
-#wpadminbar .menupop .ab-sub-wrapper {
-    background-color: rgba(0, 0, 0, 0.80) !important;
-}
-
-#wpadminbar .quicklinks .menupop ul li a, #wpadminbar .quicklinks .menupop.hover ul li a {
-    transition: 0.2s;
-    color: #ffffff !important;
-}
-
-#wpadminbar .quicklinks .menupop ul li a:hover, #wpadminbar .quicklinks .menupop.hover ul li a:hover {
-    color: #ff9999 !important;
-}
-
 /*主菜单*/
 #main-menu {
-    background-color: rgba(0, 0, 0, 0.47);
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 0.3rem 2rem;
     position: fixed;
     left: 0;
@@ -161,15 +151,9 @@ html:hover #bg {
     z-index: 50;
 }
 
-#main-menu .main-menu-wrapper {
+.main-menu-wrapper {
     margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    max-width: 72rem; /* TODO 添加不同尺寸的支持 */
+    max-width: 72rem;
     height: 100%;
 }
 
@@ -179,18 +163,7 @@ html:hover #bg {
     margin-right: 0.5rem;
 }
 
-#main-menu img.custom-logo {
-    width: 100%;
-    height: 100%;
-}
-
-#main-menu .site-branding {
-    display: flex;
-    align-items: center;
-    margin-right: auto;
-}
-
-#main-menu .site-branding > * {
+.site-branding > * {
     display: inline-block;
     margin: 0;
     line-height: 1.35;
@@ -202,10 +175,6 @@ html:hover #bg {
 }
 
 #main-menu a {
-    -moz-transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
-    -webkit-transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
-    -ms-transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
-    transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
     color: #ffffff;
 }
 
@@ -281,65 +250,51 @@ html:hover #bg {
     border: none;
 }
 
-#main article {
+article {
     transition: background-color 0.2s ease-in-out;
     border-radius: 1rem;
     margin-bottom: 1.5rem;
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.4);
 }
 
-#main article:hover {
+article:hover {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-#main article.post-list {
-    display: flex;
-    justify-content: space-between;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-}
-
-#main .outer-post-thumb {
+.outer-post-thumb {
     display: none;
 }
 
-#main article.post-list .post-title {
+article.post-list .post-title {
     width: 100%;
     margin: 0.25rem 0.6rem;
 }
 
-#main .post-content-wrapper {
+.post-content-wrapper {
     margin: 0 0 0.6rem 0.6rem;
     width: 47.5%;
 }
 
-#main .post-time {
+.post-time {
     font-size: small;
 }
 
-#main .inner-post-thumb {
+.inner-post-thumb {
     width: 47.5%;
 }
 
-#main .inner-post-thumb a {
+.inner-post-thumb a {
     display: block;
     overflow: hidden;
     height: 100%;
     border-radius: 1rem 0 1rem 0;
 }
 
-#main .inner-post-thumb img {
-    -webkit-transition: 0.5s;
-    -moz-transition: 0.5s;
-    -ms-transition: 0.5s;
-    transition: 0.5s;
-    width: 100%;
-    height: 100%;
+.inner-post-thumb img {
     object-fit: cover;
 }
 
-#main .inner-post-thumb img:hover {
+.inner-post-thumb img:hover {
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
     -ms-transform: scale(1.1);
@@ -401,7 +356,7 @@ html:hover #bg {
 }
 
 #sidebar section {
-    border-top: 3px solid rgba(255, 153, 153, 0.47);
+    border-top: 3px solid rgba(255, 153, 153, 0.5);
     margin-bottom: 1.5em;
     padding-top: 1em;
 }
@@ -419,7 +374,7 @@ html:hover #bg {
 }
 
 @media screen and (min-width: 48.875em) {
-    #main-menu button {
+    #main-menu button.top-menu-button, #main-menu button.dropdown-button {
         display: none;
     }
 
@@ -437,7 +392,7 @@ html:hover #bg {
         /*left: auto;*/
         margin: 0;
         border-radius: 0.5rem;
-        background-color: rgba(0, 0, 0, 0.77);
+        background-color: rgba(0, 0, 0, 0.8); /* 模糊背景 */
         z-index: 99999;
     }
 
@@ -520,7 +475,6 @@ html:hover #bg {
         border-top: 1px solid rgba(255, 153, 153, 0.34);
         display: flex;
         align-items: center;
-        justify-content: space-between;
         -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -550,17 +504,6 @@ html:hover #bg {
         margin-right: auto;
         margin-left: auto;
         margin-top: 3rem;
-    }
-
-    #bg {
-        -moz-transform: scale(1.0825);
-        -webkit-transform: scale(1.0825);
-        -ms-transform: scale(1.0825);
-        transform: scale(1.0825);
-        -moz-filter: blur(0.5rem);
-        -webkit-filter: blur(0.5rem);
-        -ms-filter: blur(0.5rem);
-        filter: blur(0.5rem);
     }
 
     .admin-bar #main-menu {
@@ -593,8 +536,6 @@ html:hover #bg {
         -moz-transition: 0.5s;
         -ms-transition: 0.5s;
         transition: 0.5s;
-        width: 100%;
-        height: 100%;
         object-fit: cover;
     }
 
@@ -615,17 +556,6 @@ html:hover #bg {
 
     #sidebar {
         width: auto;
-    }
-
-    #bg {
-        -moz-transform: scale(1.0825);
-        -webkit-transform: scale(1.0825);
-        -ms-transform: scale(1.0825);
-        transform: scale(1.0825);
-        -moz-filter: blur(0.5rem);
-        -webkit-filter: blur(0.5rem);
-        -ms-filter: blur(0.5rem);
-        filter: blur(0.5rem);
     }
 }
 

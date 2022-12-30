@@ -1,0 +1,32 @@
+#wpadminbar {
+    background-color: rgba(0, 0, 0, 0.60) !important;
+    -webkit-backdrop-filter: blur(.8em);
+    backdrop-filter: blur(.8em);
+}
+
+#wpadminbar a.ab-item, #wpadminbar > #wp-toolbar span.ab-label, #wpadminbar>#wp-toolbar span.ab-label {
+    transition: 0.2s;
+    color: #ffffff !important;
+}
+
+#wpadminbar .ab-top-menu > li.hover > .ab-item,
+#wpadminbar.nojq .quicklinks .ab-top-menu > li > .ab-item:focus,
+#wpadminbar:not(.mobile) .ab-top-menu > li:hover > .ab-item,
+#wpadminbar:not(.mobile) .ab-top-menu > li > .ab-item:focus,
+#wpadminbar>#wp-toolbar li.hover span.ab-label {
+    background-color: rgba(0, 0, 0, 0.20) !important;
+    color: #ff9999 !important;
+}
+
+#wpadminbar .menupop .ab-sub-wrapper {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+#wpadminbar .quicklinks .menupop ul li a, #wpadminbar .quicklinks .menupop.hover ul li a {
+    transition: 0.2s;
+    color: #ffffff !important;
+}
+
+#wpadminbar .quicklinks .menupop ul li a:hover, #wpadminbar .quicklinks .menupop.hover ul li a:hover {
+    color: #ff9999 !important;
+}

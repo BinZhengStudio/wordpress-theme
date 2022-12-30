@@ -8,8 +8,8 @@ function binzhengstudio_setup() {
 		)
 	);
 
-	add_theme_support('post-thumbnails');
-	set_post_thumbnail_size(960, 540, true);
+	add_theme_support( 'post-thumbnails' );
+	set_post_thumbnail_size( 960, 540, true );
 
 	add_theme_support(
 		'custom-logo',
@@ -21,11 +21,11 @@ function binzhengstudio_setup() {
 	);
 
 //	remove_action('wp_head', 'feed_links_extra', 3);
-	remove_action('wp_head', 'rsd_link');
-	remove_action('wp_head', 'wlwmanifest_link');
+	remove_action( 'wp_head', 'rsd_link' );
+	remove_action( 'wp_head', 'wlwmanifest_link' );
 //	remove_action('wp_head', 'index_rel_link');
 //	remove_action('wp_head', 'start_post_rel_link', 10, 0);
-	remove_action('wp_head', 'wp_generator');
+	remove_action( 'wp_head', 'wp_generator' );
 //	remove_filter('the_content', 'wptexturize');
 }
 
@@ -46,16 +46,19 @@ add_action( 'widgets_init', 'binzhengstudio_widgets_init' );
 
 function binzhengstudio_styles_and_scripts() {
 	// 进度条css
-	wp_enqueue_style( 'main', get_theme_file_uri( '/assets/css/main.min.css' ), array(), '20220711' );
+	wp_enqueue_style( 'main', get_theme_file_uri( '/assets/css/main.min.css' ), array(), '20221230' );
 	wp_enqueue_style( 'pace', get_theme_file_uri( '/assets/css/pace-theme-minimal.min.css' ), array(), '1.2.4' );
+	wp_enqueue_style( 'genericons', get_theme_file_uri( '/assets/genericons/genericons.min.css' ), array(), '20220711' );
+	if ( is_user_logged_in() ) {
+		wp_enqueue_style( 'wpadminbar', get_theme_file_uri( '/assets/css/admin-bar.min.css' ), array(), '20221230' );
+	}
 //	wp_enqueue_style( 'accessibility', get_theme_file_uri( '/assets/css/accessibility.min.css' ), array(), '20220711' );
 	// genericons css
-	wp_enqueue_style( 'genericons', get_theme_file_uri( '/assets/genericons/genericons.css' ), array(), '20220711' );
 
 	// 进度条js
 	wp_enqueue_script( 'pace', get_theme_file_uri( '/assets/js/pace.min.js' ), array(), '1.2.4' );
 	// 顶部菜单
-	wp_enqueue_script( 'main-menu', get_theme_file_uri( '/assets/js/main-menu.min.js' ), array( 'jquery' ), '20220711', true );
+	wp_enqueue_script( 'main-menu', get_theme_file_uri( '/assets/js/main-menu.min.js' ), array( 'jquery' ), '20221230', true );
 //	wp_enqueue_script( 'accessibility-menu', get_theme_file_uri( '/assets/js/accessibility.min.js' ), array( 'jquery' ), '20220711', true );
 }
 

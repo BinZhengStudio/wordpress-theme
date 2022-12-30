@@ -9,9 +9,9 @@
 </head>
 
 <body <?php body_class(); ?>>
-<header id="main-menu" role="banner">
-    <div class="main-menu-wrapper">
-        <div class="site-branding">
+<header id="main-menu" class="bgblur-0_8em" role="banner">
+    <div class="main-menu-wrapper d-flex align-center justify-between">
+        <div class="site-branding d-flex align-center">
             <?php the_custom_logo() ?>
             <h1 class="site-title">
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
@@ -31,4 +31,4 @@
 		<?php endif; ?>
     </div>
 </header>
-<div id="page" class="site">
+<div id="page" class="site bgblur-0_8em">
