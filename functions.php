@@ -45,8 +45,7 @@ function binzhengstudio_widgets_init() {
 add_action( 'widgets_init', 'binzhengstudio_widgets_init' );
 
 function binzhengstudio_styles_and_scripts() {
-	// 进度条css
-	wp_enqueue_style( 'main', get_theme_file_uri( '/assets/css/main.min.css' ), array(), '20221230' );
+	wp_enqueue_style( 'main', get_theme_file_uri( '/assets/css/main.min.css' ), array(), '20230130' );
 	wp_enqueue_style( 'pace', get_theme_file_uri( '/assets/css/pace-theme-minimal.min.css' ), array(), '1.2.4' );
 	wp_enqueue_style( 'genericons', get_theme_file_uri( '/assets/genericons/genericons.min.css' ), array(), '20220711' );
 	if ( is_user_logged_in() ) {
